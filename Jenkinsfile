@@ -84,7 +84,7 @@ pipeline {
       steps {
         git credentialsId: GITCREDENTIAL,
             url: GITDEPADD,
-            branch: 'main'
+            branch: 'master'
         
         // 이미지 태그 변경 후 메인 브랜치에 푸시
         sh "git config --global user.email ${GITEMAIL}"
