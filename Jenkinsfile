@@ -93,7 +93,7 @@ pipeline {
         sh "sed -i 's@${DOCKERHUB2}:.*@${DOCKERHUB2}:${currentBuild.number}@g' deploy/deployment-db.yml"
         sh "git add ."
         sh "git commit -m 'fix:${DOCKERHUB1} ${currentBuild.number} image versioning'"
-        sh "git branch -M main"
+        sh "git branch -M master"
         sh "git remote remove origin"
         sh "git remote add origin ${GITDEPADD}"
         sh "git push -u origin master"
