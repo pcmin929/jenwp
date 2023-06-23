@@ -96,7 +96,7 @@ pipeline {
         sh "git branch -M main"
         sh "git remote remove origin"
         sh "git remote add origin ${GITDEPADD}"
-        sh "git push -u origin main"
+        sh "git push -u origin master"
 
       }
       post {
